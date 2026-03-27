@@ -4,75 +4,175 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BGO All Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--primary:#0b3c6d;--secondary:#1e88e5;--text:#111827;--muted:#6b7280;--border:#dbe4f0;--card:#ffffff}
 *{box-sizing:border-box}
 body{margin:0;font-family:'Prompt',sans-serif;background:radial-gradient(circle at top,#edf5ff 0%,#f8fbff 35%,#f4f7fb 100%);color:var(--text)}
-a{color:inherit;text-decoration:none}.app{max-width:640px;margin:0 auto;min-height:100vh;padding-bottom:32px}
-header{background:linear-gradient(135deg,#0b3c6d,#1e88e5);color:#fff;padding:24px 18px 32px;border-bottom-left-radius:28px;border-bottom-right-radius:28px;box-shadow:0 14px 30px rgba(11,60,109,.18)}
-.header-row{display:flex;align-items:center;gap:14px}.logo{width:52px;height:52px;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-weight:700;letter-spacing:.04em}
-.header-copy h1{margin:0;font-size:22px;line-height:1.2}.header-copy p{margin:4px 0 0;font-size:13px;opacity:.92}
-.hero-note{margin-top:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:14px;font-size:13px;line-height:1.55}
-.section{padding:18px 16px 0}.service-card,.footer-note{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 20px rgba(15,23,42,.05)}
-.banner{margin-top:14px;background:linear-gradient(135deg,#fff8e6,#ffe6b7);border-radius:18px;padding:15px 16px;box-shadow:0 8px 20px rgba(166,106,7,.08)}.banner b{display:block;font-size:15px;color:#8a5200}.banner p{margin:4px 0 0;font-size:12px;color:#9a6700}
-.section-title{margin:18px 4px 10px;font-size:14px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.service-card{padding:16px 14px;border-radius:22px;display:flex;flex-direction:column;gap:10px;min-height:160px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}.service-card:hover,.service-card:focus-visible{transform:translateY(-2px);box-shadow:0 14px 30px rgba(15,23,42,.10)}
-.service-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.icon{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px}.chip{display:inline-flex;align-items:center;justify-content:center;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:600}
-.food .icon,.food .chip{background:#fff4db}.food .chip{color:#ad6800}.ride .icon,.ride .chip{background:#eaf9ef}.ride .chip{color:#0f7a31}.parcel .icon,.parcel .chip{background:#edf4ff}.parcel .chip{color:#1d4ed8}.admin .icon,.admin .chip{background:#f3edff}.admin .chip{color:#6d28d9}
-.service-card h2{margin:0;font-size:17px;line-height:1.3}.service-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.service-action{margin-top:auto;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600}.footer-note{margin:18px 4px 0;padding:12px 14px;color:#4b5563;font-size:12px;line-height:1.55;border-style:dashed}
-@media (max-width:520px){.grid{grid-template-columns:1fr}.service-card{min-height:unset}}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.app{max-width:640px;margin:0 auto;min-height:100vh;padding-bottom:32px}
+header{background:linear-gradient(135deg,#0b3c6d,#1e88e5);color:#fff;padding:24px 18px 28px;border-bottom-left-radius:28px;border-bottom-right-radius:28px;box-shadow:0 14px 30px rgba(11,60,109,.18)}
+.header-row{display:flex;align-items:center;gap:14px}
+.logo-wrap{width:62px;height:62px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none}
+.logo-wrap img{width:100%;height:100%;object-fit:cover}
+.eyebrow{margin:0;font-size:13px;letter-spacing:.28em;font-weight:700;text-transform:uppercase;opacity:.9}
+.header-copy h1{margin:4px 0 0;font-size:24px;line-height:1.2}
+.section{padding:18px 16px 0}
+.section-title{margin:0 4px 14px;font-size:14px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.service-tile,.footer-note,.ad-card{background:#fff;border:1px solid var(--border);border-radius:24px;box-shadow:0 10px 24px rgba(15,23,42,.06)}
+.service-tile{padding:18px 16px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:230px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;overflow:hidden}
+.service-tile:hover,.service-tile:focus-visible{transform:translateY(-2px);box-shadow:0 16px 32px rgba(15,23,42,.10)}
+.icon-shell{width:96px;height:96px;border-radius:30px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 12px 24px rgba(15,23,42,.08)}
+.icon-shell svg{width:52px;height:52px;display:block}
+.tile-label{margin-top:14px;font-size:21px;font-weight:700;line-height:1.25}
+.tile-copy{margin:8px 0 0;font-size:12px;line-height:1.6;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:58px}
+.tile-chip{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:999px;font-size:11px;font-weight:700}
+.food .icon-shell{background:linear-gradient(180deg,#fff7df,#ffe8a8)}.food .tile-chip{background:#fff4db;color:#ad6800}
+.ride .icon-shell{background:linear-gradient(180deg,#ecfff4,#c7f3d8)}.ride .tile-chip{background:#eaf9ef;color:#0f7a31}
+.parcel .icon-shell{background:linear-gradient(180deg,#eef4ff,#d5e6ff)}.parcel .tile-chip{background:#edf4ff;color:#1d4ed8}
+.admin .icon-shell{background:linear-gradient(180deg,#f6efff,#eadcff)}.admin .tile-chip{background:#f3edff;color:#6d28d9}
+.ad-card{padding:14px}
+.ad-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.ad-hero,.slider-shell{overflow:hidden;border-radius:18px;background:#edf4ff}
+.ad-hero{height:240px}
+.ad-hero img{width:100%;height:100%;object-fit:cover}
+.slider-shell{position:relative;height:240px}
+.slider-track{display:flex;height:100%;transition:transform .45s ease}
+.slide{min-width:100%;position:relative;height:100%}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide-caption{position:absolute;left:12px;right:12px;bottom:12px;padding:8px 10px;border-radius:12px;background:rgba(11,60,109,.78);color:#fff;font-size:12px;line-height:1.4;backdrop-filter:blur(6px)}
+.slider-dots{display:flex;justify-content:center;gap:8px;margin-top:12px}.slider-dot{width:8px;height:8px;border-radius:999px;background:#c7d2e2;transition:all .2s ease}.slider-dot.active{width:24px;background:#1e88e5}
+.footer-note{margin:18px 4px 0;padding:12px 14px;color:#4b5563;font-size:12px;line-height:1.55;border-style:dashed}
+@media (max-width:520px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-tile{min-height:214px;padding:16px 12px 14px}.icon-shell{width:88px;height:88px;border-radius:28px}.icon-shell svg{width:46px;height:46px}.tile-label{font-size:18px}.tile-copy{min-height:54px}.header-copy h1{font-size:22px}.logo-wrap{width:56px;height:56px}.ad-row{grid-template-columns:1fr}.ad-hero,.slider-shell{height:180px}.slide-caption{font-size:11px;padding:7px 9px}}
 </style>
 </head>
 <body>
   <main class="app">
     <header>
       <div class="header-row">
-        <div class="logo">BGO</div>
+        <div class="logo-wrap">
+          <img src="BGO%20Icon.jpg" alt="BGO logo">
+        </div>
         <div class="header-copy">
-          <h1>ศูนย์รวมบริการ BGO</h1>
-          <p>เลือกบริการที่ต้องการใช้งานได้จากหน้านี้</p>
+          <p class="eyebrow">BE READY TO GO</p>
+          <h1>&#x0E28;&#x0E39;&#x0E19;&#x0E22;&#x0E4C;&#x0E23;&#x0E27;&#x0E21;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23; BGO</h1>
         </div>
       </div>
-      <div class="hero-note">หน้านี้เป็นหน้ารวมบริการสำหรับลูกค้า เมื่อเลือกบริการแล้ว ระบบจะพาไปยังหน้าที่เกี่ยวข้องทันที</div>
     </header>
 
     <section class="section">
-      <div class="banner">
-        <b>รวมบริการในพื้นที่เบตงไว้ในหน้าเดียว</b>
-        <p>สั่งอาหาร เรียกรถ ส่งพัสดุ และติดต่อทีมงาน ได้จากจุดเริ่มต้นเดียวกัน</p>
-      </div>
-
-      <div class="section-title">เลือกบริการ</div>
+      <div class="section-title">&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;</div>
       <div class="grid">
-        <a class="service-card food" href="https://bae-tong-delivery-three.vercel.app/" target="_self" rel="noopener noreferrer">
-          <div class="service-card-top"><div class="icon">F</div><div class="chip">Food Delivery</div></div>
-          <h2>สั่งอาหาร</h2>
-          <p>เลือกเมนูจากร้านค้าในระบบและสั่งจัดส่งถึงคุณ</p>
-          <div class="service-action"><span>เข้าใช้งาน</span><span>-></span></div>
+        <a class="service-tile food" href="https://bae-tong-delivery-three.vercel.app/" target="_self" rel="noopener noreferrer">
+          <div class="icon-shell" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 14V30" stroke="#ad6800" stroke-width="4" stroke-linecap="round"/>
+              <path d="M25 14V30" stroke="#ad6800" stroke-width="4" stroke-linecap="round"/>
+              <path d="M31 14V30" stroke="#ad6800" stroke-width="4" stroke-linecap="round"/>
+              <path d="M25 30V50" stroke="#ad6800" stroke-width="4" stroke-linecap="round"/>
+              <path d="M43 14C39 18 39 28 43 32V50" stroke="#ad6800" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="tile-label">&#x0E2A;&#x0E31;&#x0E48;&#x0E07;&#x0E2D;&#x0E32;&#x0E2B;&#x0E32;&#x0E23;</div>
+          <p class="tile-copy">&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E40;&#x0E21;&#x0E19;&#x0E39;&#x0E08;&#x0E32;&#x0E01;&#x0E23;&#x0E49;&#x0E32;&#x0E19;&#x0E04;&#x0E49;&#x0E32;&#x0E43;&#x0E19;&#x0E23;&#x0E30;&#x0E1A;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E2A;&#x0E31;&#x0E48;&#x0E07;&#x0E08;&#x0E31;&#x0E14;&#x0E2A;&#x0E48;&#x0E07;&#x0E16;&#x0E36;&#x0E07;&#x0E04;&#x0E38;&#x0E13;</p>
+          <div class="tile-chip">Food Delivery</div>
         </a>
-        <a class="service-card ride" href="https://bgo-ride.vercel.app/" target="_self" rel="noopener noreferrer">
-          <div class="service-card-top"><div class="icon">R</div><div class="chip">Ride Service</div></div>
-          <h2>เรียกรถรับส่ง</h2>
-          <p>เลือกจุดรับและปลายทางเพื่อเรียกใช้บริการเดินทาง</p>
-          <div class="service-action"><span>เข้าใช้งาน</span><span>-></span></div>
+        <a class="service-tile ride" href="https://bgo-ride.vercel.app/" target="_self" rel="noopener noreferrer">
+          <div class="icon-shell" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="21" cy="46" r="6" stroke="#0f7a31" stroke-width="4"/>
+              <circle cx="47" cy="46" r="6" stroke="#0f7a31" stroke-width="4"/>
+              <path d="M15 40L20 26H40L47 34H52C54 34 56 36 56 38V40" stroke="#0f7a31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24 26V20C24 18.3 25.3 17 27 17H36" stroke="#0f7a31" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="tile-label">&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E23;&#x0E16;&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;</div>
+          <p class="tile-copy">&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E08;&#x0E38;&#x0E14;&#x0E23;&#x0E31;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E1B;&#x0E25;&#x0E32;&#x0E22;&#x0E17;&#x0E32;&#x0E07;&#x0E40;&#x0E1E;&#x0E37;&#x0E48;&#x0E2D;&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E43;&#x0E0A;&#x0E49;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E40;&#x0E14;&#x0E34;&#x0E19;&#x0E17;&#x0E32;&#x0E07;</p>
+          <div class="tile-chip">Ride Service</div>
         </a>
-        <a class="service-card parcel" href="https://bgo-pacel.vercel.app/" target="_self" rel="noopener noreferrer">
-          <div class="service-card-top"><div class="icon">P</div><div class="chip">Parcel Service</div></div>
-          <h2>รับส่งพัสดุ</h2>
-          <p>กรอกจุดรับและจุดส่งสำหรับเรียกใช้บริการรับส่งพัสดุ</p>
-          <div class="service-action"><span>เข้าใช้งาน</span><span>-></span></div>
+        <a class="service-tile parcel" href="https://bgo-pacel.vercel.app/" target="_self" rel="noopener noreferrer">
+          <div class="icon-shell" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 23L32 15L46 23L32 31L18 23Z" stroke="#1d4ed8" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M18 23V40L32 48L46 40V23" stroke="#1d4ed8" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M32 31V48" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="tile-label">&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;&#x0E1E;&#x0E31;&#x0E2A;&#x0E14;&#x0E38;</div>
+          <p class="tile-copy">&#x0E01;&#x0E23;&#x0E2D;&#x0E01;&#x0E08;&#x0E38;&#x0E14;&#x0E23;&#x0E31;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E08;&#x0E38;&#x0E14;&#x0E2A;&#x0E48;&#x0E07;&#x0E2A;&#x0E33;&#x0E2B;&#x0E23;&#x0E31;&#x0E1A;&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E43;&#x0E0A;&#x0E49;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;&#x0E1E;&#x0E31;&#x0E2A;&#x0E14;&#x0E38;</p>
+          <div class="tile-chip">Parcel Service</div>
         </a>
-        <a class="service-card admin" href="https://line.me/R/ti/p/@bgo951100" target="_blank" rel="noopener noreferrer">
-          <div class="service-card-top"><div class="icon">S</div><div class="chip">Support</div></div>
-          <h2>ติดต่อแอดมิน</h2>
-          <p>ใช้สำหรับสอบถามข้อมูล แจ้งปัญหา หรือขอความช่วยเหลือเพิ่มเติม</p>
-          <div class="service-action"><span>เปิด LINE OA</span><span>^</span></div>
+        <a class="service-tile admin" href="https://line.me/R/ti/p/@bgo951100" target="_blank" rel="noopener noreferrer">
+          <div class="icon-shell" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 22C18 17.6 21.6 14 26 14H38C44.6 14 50 19.4 50 26V27C50 33.6 44.6 39 38 39H31L22 46V39.5C19.6 38 18 35.2 18 32.1V22Z" stroke="#6d28d9" stroke-width="4" stroke-linejoin="round"/>
+              <circle cx="26" cy="27" r="2.5" fill="#6d28d9"/>
+              <circle cx="32" cy="27" r="2.5" fill="#6d28d9"/>
+              <circle cx="38" cy="27" r="2.5" fill="#6d28d9"/>
+            </svg>
+          </div>
+          <div class="tile-label">&#x0E15;&#x0E34;&#x0E14;&#x0E15;&#x0E48;&#x0E2D;&#x0E41;&#x0E2D;&#x0E14;&#x0E21;&#x0E34;&#x0E19;</div>
+          <p class="tile-copy">&#x0E2A;&#x0E2D;&#x0E1A;&#x0E16;&#x0E32;&#x0E21;&#x0E02;&#x0E49;&#x0E2D;&#x0E21;&#x0E39;&#x0E25; &#x0E41;&#x0E08;&#x0E49;&#x0E07;&#x0E1B;&#x0E31;&#x0E0D;&#x0E2B;&#x0E32; &#x0E2B;&#x0E23;&#x0E37;&#x0E2D;&#x0E02;&#x0E2D;&#x0E04;&#x0E27;&#x0E32;&#x0E21;&#x0E0A;&#x0E48;&#x0E27;&#x0E22;&#x0E40;&#x0E2B;&#x0E25;&#x0E37;&#x0E2D;&#x0E40;&#x0E1E;&#x0E34;&#x0E48;&#x0E21;&#x0E40;&#x0E15;&#x0E34;&#x0E21;</p>
+          <div class="tile-chip">Support</div>
         </a>
       </div>
+    </section>
 
-      <div class="footer-note">หน้านี้เป็น launcher อย่างเดียว และไม่ได้พึ่ง LIFF หรือระบบปลายทางโดยตรง สามารถใช้เป็นหน้ารวมบริการก่อนเลือกเข้าแต่ละระบบได้ทันที</div>
+    <section class="section">
+      <div class="section-title">&#x0E1E;&#x0E37;&#x0E49;&#x0E19;&#x0E17;&#x0E35;&#x0E48;&#x0E42;&#x0E06;&#x0E29;&#x0E13;&#x0E32;</div>
+      <div class="ad-card">
+        <div class="ad-row">
+          <div class="ad-hero">
+            <img src="ad-main.png" alt="&#x0E20;&#x0E32;&#x0E1E;&#x0E42;&#x0E06;&#x0E29;&#x0E13;&#x0E32;&#x0E2B;&#x0E25;&#x0E31;&#x0E01;">
+          </div>
+          <div>
+            <div class="slider-shell">
+              <div class="slider-track" id="promoTrack">
+                <div class="slide">
+                  <img src="ad-slide-1.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E04;&#x0E23;&#x0E35;&#x0E21;">
+                  <div class="slide-caption">&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E04;&#x0E23;&#x0E35;&#x0E21;</div>
+                </div>
+                <div class="slide">
+                  <img src="ad-slide-2.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E43;&#x0E1A;&#x0E40;&#x0E15;&#x0E22;">
+                  <div class="slide-caption">&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E43;&#x0E1A;&#x0E40;&#x0E15;&#x0E22;</div>
+                </div>
+                <div class="slide">
+                  <img src="ad-slide-3.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E44;&#x0E01;&#x0E48;&#x0E40;&#x0E15;&#x0E23;">
+                  <div class="slide-caption">&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E44;&#x0E01;&#x0E48;&#x0E40;&#x0E15;&#x0E23;</div>
+                </div>
+                <div class="slide">
+                  <img src="ad-slide-4.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E0A;&#x0E47;&#x0E2D;&#x0E01;&#x0E42;&#x0E01;&#x0E44;&#x0E01;&#x0E48;">
+                  <div class="slide-caption">&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E0A;&#x0E47;&#x0E2D;&#x0E01;&#x0E42;&#x0E01;&#x0E44;&#x0E01;&#x0E48;</div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-dots" id="promoDots">
+              <span class="slider-dot active"></span>
+              <span class="slider-dot"></span>
+              <span class="slider-dot"></span>
+              <span class="slider-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-note">&#x0E2B;&#x0E19;&#x0E49;&#x0E32;&#x0E19;&#x0E35;&#x0E49;&#x0E40;&#x0E1B;&#x0E47;&#x0E19; launcher &#x0E2D;&#x0E22;&#x0E48;&#x0E32;&#x0E07;&#x0E40;&#x0E14;&#x0E35;&#x0E22;&#x0E27; &#x0E2A;&#x0E32;&#x0E21;&#x0E32;&#x0E23;&#x0E16;&#x0E43;&#x0E0A;&#x0E49;&#x0E40;&#x0E1B;&#x0E47;&#x0E19;&#x0E2B;&#x0E19;&#x0E49;&#x0E32;&#x0E23;&#x0E27;&#x0E21;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E01;&#x0E48;&#x0E2D;&#x0E19;&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E40;&#x0E02;&#x0E49;&#x0E32;&#x0E41;&#x0E15;&#x0E48;&#x0E25;&#x0E30;&#x0E23;&#x0E30;&#x0E1A;&#x0E1A;&#x0E44;&#x0E14;&#x0E49;&#x0E17;&#x0E31;&#x0E19;&#x0E17;&#x0E35;</div>
     </section>
   </main>
+<script>
+const promoTrack = document.getElementById('promoTrack');
+const promoDots = Array.from(document.querySelectorAll('#promoDots .slider-dot'));
+let promoIndex = 0;
+function renderPromo(index){
+  promoTrack.style.transform = `translateX(-${index * 100}%)`;
+  promoDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+}
+setInterval(() => {
+  promoIndex = (promoIndex + 1) % promoDots.length;
+  renderPromo(promoIndex);
+}, 2600);
+</script>
 </body>
 </html>
