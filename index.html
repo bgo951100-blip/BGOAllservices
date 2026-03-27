@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BGO All Services</title>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <style>
 :root{--primary:#0b3c6d;--secondary:#1e88e5;--text:#111827;--muted:#6b7280;--border:#dbe4f0;--card:#ffffff}
 *{box-sizing:border-box}
@@ -15,9 +14,7 @@ header{background:linear-gradient(135deg,#0b3c6d,#1e88e5);color:#fff;padding:24p
 .header-row{display:flex;align-items:center;gap:14px}.logo{width:52px;height:52px;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-weight:700;letter-spacing:.04em}
 .header-copy h1{margin:0;font-size:22px;line-height:1.2}.header-copy p{margin:4px 0 0;font-size:13px;opacity:.92}
 .hero-note{margin-top:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:14px;font-size:13px;line-height:1.55}
-.section{padding:18px 16px 0}.status-card,.service-card,.footer-note{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 20px rgba(15,23,42,.05)}
-.status-card{padding:14px 16px}.status-label{font-size:12px;color:var(--muted)}.status-pill{display:inline-flex;align-items:center;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:600;background:#eff6ff;color:#1d4ed8}.status-pill.ready{background:#ecfdf3;color:#0f7a31}.status-pill.warn{background:#fff7ed;color:#c2410c}
-.profile-name{margin:10px 0 0;font-size:16px;font-weight:600}.profile-sub{margin:2px 0 0;font-size:12px;color:var(--muted)}
+.section{padding:18px 16px 0}.service-card,.footer-note{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 20px rgba(15,23,42,.05)}
 .banner{margin-top:14px;background:linear-gradient(135deg,#fff8e6,#ffe6b7);border-radius:18px;padding:15px 16px;box-shadow:0 8px 20px rgba(166,106,7,.08)}.banner b{display:block;font-size:15px;color:#8a5200}.banner p{margin:4px 0 0;font-size:12px;color:#9a6700}
 .section-title{margin:18px 4px 10px;font-size:14px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .service-card{padding:16px 14px;border-radius:22px;display:flex;flex-direction:column;gap:10px;min-height:160px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}.service-card:hover,.service-card:focus-visible{transform:translateY(-2px);box-shadow:0 14px 30px rgba(15,23,42,.10)}
@@ -33,110 +30,49 @@ header{background:linear-gradient(135deg,#0b3c6d,#1e88e5);color:#fff;padding:24p
       <div class="header-row">
         <div class="logo">BGO</div>
         <div class="header-copy">
-          <h1>&#x0E28;&#x0E39;&#x0E19;&#x0E22;&#x0E4C;&#x0E23;&#x0E27;&#x0E21;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23; BGO</h1>
-          <p>&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E17;&#x0E35;&#x0E48;&#x0E15;&#x0E49;&#x0E2D;&#x0E07;&#x0E01;&#x0E32;&#x0E23;&#x0E43;&#x0E0A;&#x0E49;&#x0E07;&#x0E32;&#x0E19;&#x0E44;&#x0E14;&#x0E49;&#x0E08;&#x0E32;&#x0E01;&#x0E2B;&#x0E19;&#x0E49;&#x0E32;&#x0E19;&#x0E35;&#x0E49;</p>
+          <h1>ศูนย์รวมบริการ BGO</h1>
+          <p>เลือกบริการที่ต้องการใช้งานได้จากหน้านี้</p>
         </div>
       </div>
-      <div class="hero-note">&#x0E2B;&#x0E19;&#x0E49;&#x0E32;&#x0E19;&#x0E35;&#x0E49;&#x0E40;&#x0E1B;&#x0E47;&#x0E19;&#x0E17;&#x0E32;&#x0E07;&#x0E40;&#x0E02;&#x0E49;&#x0E32;&#x0E2B;&#x0E25;&#x0E31;&#x0E01;&#x0E2A;&#x0E33;&#x0E2B;&#x0E23;&#x0E31;&#x0E1A;&#x0E25;&#x0E39;&#x0E01;&#x0E04;&#x0E49;&#x0E32;&#x0E17;&#x0E35;&#x0E48;&#x0E40;&#x0E1B;&#x0E34;&#x0E14;&#x0E08;&#x0E32;&#x0E01; LINE LIFF &#x0E40;&#x0E21;&#x0E37;&#x0E48;&#x0E2D;&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E41;&#x0E25;&#x0E49;&#x0E27; &#x0E23;&#x0E30;&#x0E1A;&#x0E1A;&#x0E08;&#x0E30;&#x0E1E;&#x0E32;&#x0E44;&#x0E1B;&#x0E22;&#x0E31;&#x0E07;&#x0E2B;&#x0E19;&#x0E49;&#x0E32;&#x0E17;&#x0E35;&#x0E48;&#x0E40;&#x0E01;&#x0E35;&#x0E48;&#x0E22;&#x0E27;&#x0E02;&#x0E49;&#x0E2D;&#x0E07;&#x0E17;&#x0E31;&#x0E19;&#x0E17;&#x0E35;</div>
+      <div class="hero-note">หน้านี้เป็นหน้ารวมบริการสำหรับลูกค้า เมื่อเลือกบริการแล้ว ระบบจะพาไปยังหน้าที่เกี่ยวข้องทันที</div>
     </header>
 
     <section class="section">
-      <div class="status-card">
-        <div class="status-label">LINE LIFF &#x0E2A;&#x0E16;&#x0E32;&#x0E19;&#x0E30;</div>
-        <div id="liffStatus" class="status-pill">กำลังโหลด...</div>
-        <div id="profileName" class="profile-name">BGO</div>
-        <div id="profileSub" class="profile-sub">สถานะโปรไฟล์ LINE</div>
-      </div>
-
       <div class="banner">
-        <b>&#x0E23;&#x0E27;&#x0E21;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E43;&#x0E19;&#x0E1E;&#x0E37;&#x0E49;&#x0E19;&#x0E17;&#x0E35;&#x0E48;&#x0E40;&#x0E1A;&#x0E15;&#x0E07;&#x0E44;&#x0E27;&#x0E49;&#x0E43;&#x0E19;&#x0E2B;&#x0E19;&#x0E49;&#x0E32;&#x0E40;&#x0E14;&#x0E35;&#x0E22;&#x0E27;</b>
-        <p>&#x0E2A;&#x0E31;&#x0E48;&#x0E07;&#x0E2D;&#x0E32;&#x0E2B;&#x0E32;&#x0E23; &#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E23;&#x0E16; &#x0E2A;&#x0E48;&#x0E07;&#x0E1E;&#x0E31;&#x0E2A;&#x0E14;&#x0E38; &#x0E41;&#x0E25;&#x0E30;&#x0E15;&#x0E34;&#x0E14;&#x0E15;&#x0E48;&#x0E2D;&#x0E17;&#x0E35;&#x0E21;&#x0E07;&#x0E32;&#x0E19; &#x0E44;&#x0E14;&#x0E49;&#x0E08;&#x0E32;&#x0E01;&#x0E08;&#x0E38;&#x0E14;&#x0E40;&#x0E23;&#x0E34;&#x0E48;&#x0E21;&#x0E15;&#x0E49;&#x0E19;&#x0E40;&#x0E14;&#x0E35;&#x0E22;&#x0E27;&#x0E01;&#x0E31;&#x0E19;</p>
+        <b>รวมบริการในพื้นที่เบตงไว้ในหน้าเดียว</b>
+        <p>สั่งอาหาร เรียกรถ ส่งพัสดุ และติดต่อทีมงาน ได้จากจุดเริ่มต้นเดียวกัน</p>
       </div>
 
-      <div class="section-title">&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;</div>
+      <div class="section-title">เลือกบริการ</div>
       <div class="grid">
-        <a class="service-card food" href="https://bae-tong-delivery-three.vercel.app" target="_self" rel="noopener noreferrer">
+        <a class="service-card food" href="https://bae-tong-delivery-three.vercel.app/" target="_self" rel="noopener noreferrer">
           <div class="service-card-top"><div class="icon">F</div><div class="chip">Food Delivery</div></div>
-          <h2>&#x0E2A;&#x0E31;&#x0E48;&#x0E07;&#x0E2D;&#x0E32;&#x0E2B;&#x0E32;&#x0E23;</h2>
-          <p>&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E40;&#x0E21;&#x0E19;&#x0E39;&#x0E08;&#x0E32;&#x0E01;&#x0E23;&#x0E49;&#x0E32;&#x0E19;&#x0E04;&#x0E49;&#x0E32;&#x0E43;&#x0E19;&#x0E23;&#x0E30;&#x0E1A;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E2A;&#x0E31;&#x0E48;&#x0E07;&#x0E08;&#x0E31;&#x0E14;&#x0E2A;&#x0E48;&#x0E07;&#x0E16;&#x0E36;&#x0E07;&#x0E04;&#x0E38;&#x0E13;</p>
-          <div class="service-action"><span>&#x0E40;&#x0E02;&#x0E49;&#x0E32;&#x0E43;&#x0E0A;&#x0E49;&#x0E07;&#x0E32;&#x0E19;</span><span>-&gt;</span></div>
+          <h2>สั่งอาหาร</h2>
+          <p>เลือกเมนูจากร้านค้าในระบบและสั่งจัดส่งถึงคุณ</p>
+          <div class="service-action"><span>เข้าใช้งาน</span><span>-></span></div>
         </a>
-        <a class="service-card ride" href="https://bgo-ride.vercel.app" target="_self" rel="noopener noreferrer">
+        <a class="service-card ride" href="https://bgo-ride.vercel.app/" target="_self" rel="noopener noreferrer">
           <div class="service-card-top"><div class="icon">R</div><div class="chip">Ride Service</div></div>
-          <h2>&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E23;&#x0E16;&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;</h2>
-          <p>&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E08;&#x0E38;&#x0E14;&#x0E23;&#x0E31;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E1B;&#x0E25;&#x0E32;&#x0E22;&#x0E17;&#x0E32;&#x0E07;&#x0E40;&#x0E1E;&#x0E37;&#x0E48;&#x0E2D;&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E43;&#x0E0A;&#x0E49;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E40;&#x0E14;&#x0E34;&#x0E19;&#x0E17;&#x0E32;&#x0E07;</p>
-          <div class="service-action"><span>&#x0E40;&#x0E02;&#x0E49;&#x0E32;&#x0E43;&#x0E0A;&#x0E49;&#x0E07;&#x0E32;&#x0E19;</span><span>-&gt;</span></div>
+          <h2>เรียกรถรับส่ง</h2>
+          <p>เลือกจุดรับและปลายทางเพื่อเรียกใช้บริการเดินทาง</p>
+          <div class="service-action"><span>เข้าใช้งาน</span><span>-></span></div>
         </a>
-        <a class="service-card parcel" href="https://bgo-pacel.vercel.app" target="_self" rel="noopener noreferrer">
+        <a class="service-card parcel" href="https://bgo-pacel.vercel.app/" target="_self" rel="noopener noreferrer">
           <div class="service-card-top"><div class="icon">P</div><div class="chip">Parcel Service</div></div>
-          <h2>&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;&#x0E1E;&#x0E31;&#x0E2A;&#x0E14;&#x0E38;</h2>
-          <p>&#x0E01;&#x0E23;&#x0E2D;&#x0E01;&#x0E08;&#x0E38;&#x0E14;&#x0E23;&#x0E31;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E08;&#x0E38;&#x0E14;&#x0E2A;&#x0E48;&#x0E07;&#x0E2A;&#x0E33;&#x0E2B;&#x0E23;&#x0E31;&#x0E1A;&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E43;&#x0E0A;&#x0E49;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;&#x0E1E;&#x0E31;&#x0E2A;&#x0E14;&#x0E38;</p>
-          <div class="service-action"><span>&#x0E40;&#x0E02;&#x0E49;&#x0E32;&#x0E43;&#x0E0A;&#x0E49;&#x0E07;&#x0E32;&#x0E19;</span><span>-&gt;</span></div>
+          <h2>รับส่งพัสดุ</h2>
+          <p>กรอกจุดรับและจุดส่งสำหรับเรียกใช้บริการรับส่งพัสดุ</p>
+          <div class="service-action"><span>เข้าใช้งาน</span><span>-></span></div>
         </a>
         <a class="service-card admin" href="https://line.me/R/ti/p/@bgo951100" target="_blank" rel="noopener noreferrer">
           <div class="service-card-top"><div class="icon">S</div><div class="chip">Support</div></div>
-          <h2>&#x0E15;&#x0E34;&#x0E14;&#x0E15;&#x0E48;&#x0E2D;&#x0E41;&#x0E2D;&#x0E14;&#x0E21;&#x0E34;&#x0E19;</h2>
-          <p>&#x0E43;&#x0E0A;&#x0E49;&#x0E2A;&#x0E33;&#x0E2B;&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E2D;&#x0E1A;&#x0E16;&#x0E32;&#x0E21;&#x0E02;&#x0E49;&#x0E2D;&#x0E21;&#x0E39;&#x0E25; &#x0E41;&#x0E08;&#x0E49;&#x0E07;&#x0E1B;&#x0E31;&#x0E0D;&#x0E2B;&#x0E32; &#x0E2B;&#x0E23;&#x0E37;&#x0E2D;&#x0E02;&#x0E2D;&#x0E04;&#x0E27;&#x0E32;&#x0E21;&#x0E0A;&#x0E48;&#x0E27;&#x0E22;&#x0E40;&#x0E2B;&#x0E25;&#x0E37;&#x0E2D;&#x0E40;&#x0E1E;&#x0E34;&#x0E48;&#x0E21;&#x0E40;&#x0E15;&#x0E34;&#x0E21;</p>
-          <div class="service-action"><span>&#x0E40;&#x0E1B;&#x0E34;&#x0E14; LINE OA</span><span>^</span></div>
+          <h2>ติดต่อแอดมิน</h2>
+          <p>ใช้สำหรับสอบถามข้อมูล แจ้งปัญหา หรือขอความช่วยเหลือเพิ่มเติม</p>
+          <div class="service-action"><span>เปิด LINE OA</span><span>^</span></div>
         </a>
       </div>
 
-      <div class="footer-note">&#x0E02;&#x0E31;&#x0E49;&#x0E19;&#x0E19;&#x0E35;&#x0E49;&#x0E22;&#x0E31;&#x0E07;&#x0E44;&#x0E21;&#x0E48;&#x0E41;&#x0E15;&#x0E30;&#x0E23;&#x0E30;&#x0E1A;&#x0E1A;&#x0E1B;&#x0E25;&#x0E32;&#x0E22;&#x0E17;&#x0E32;&#x0E07;&#x0E17;&#x0E31;&#x0E49;&#x0E07; food, ride &#x0E41;&#x0E25;&#x0E30; parcel &#x0E1C;&#x0E21;&#x0E40;&#x0E1E;&#x0E34;&#x0E48;&#x0E21;&#x0E40;&#x0E09;&#x0E1E;&#x0E32;&#x0E30;&#x0E2B;&#x0E19;&#x0E49;&#x0E32; launcher &#x0E43;&#x0E2B;&#x0E49;&#x0E1E;&#x0E23;&#x0E49;&#x0E2D;&#x0E21;&#x0E2A;&#x0E33;&#x0E2B;&#x0E23;&#x0E31;&#x0E1A;&#x0E43;&#x0E0A;&#x0E49;&#x0E07;&#x0E32;&#x0E19;&#x0E40;&#x0E1B;&#x0E47;&#x0E19; LIFF hub &#x0E01;&#x0E48;&#x0E2D;&#x0E19;</div>
+      <div class="footer-note">หน้านี้เป็น launcher อย่างเดียว และไม่ได้พึ่ง LIFF หรือระบบปลายทางโดยตรง สามารถใช้เป็นหน้ารวมบริการก่อนเลือกเข้าแต่ละระบบได้ทันที</div>
     </section>
   </main>
-
-<script>
-const LIFF_ID = "2008630186-AE1aRRyg";
-const liffStatus = document.getElementById("liffStatus");
-const profileName = document.getElementById("profileName");
-const profileSub = document.getElementById("profileSub");
-
-function setStatus(text, variant) {
-  liffStatus.textContent = text;
-  liffStatus.className = `status-pill${variant ? ` ${variant}` : ""}`;
-}
-
-async function initLiff() {
-  if (!window.liff) {
-    setStatus("ไม่พบ LIFF SDK", "warn");
-    profileSub.textContent = "ไม่พบ LINE SDK บนหน้านี้";
-    return;
-  }
-
-  if (!LIFF_ID) {
-    setStatus("ยังไม่ได้ตั้งค่า LIFF ID", "warn");
-    profileSub.textContent = "กรุณาตั้งค่า LIFF ID ก่อนใช้งาน";
-    return;
-  }
-
-  try {
-    await liff.init({ liffId: LIFF_ID });
-    if (!liff.isLoggedIn()) {
-      setStatus("ต้องเข้าสู่ระบบ LINE", "warn");
-      profileSub.textContent = "กำลังพาไปเข้าสู่ระบบ LINE...";
-      liff.login();
-      return;
-    }
-    const profile = await liff.getProfile();
-    const context = liff.getContext();
-    setStatus("พร้อมใช้งาน", "ready");
-    profileName.textContent = profile.displayName || "BGO";
-    profileSub.textContent = `LINE User ID: ${profile.userId}${context?.type ? ` | เปิดจาก ${context.type}` : ""}`;
-    localStorage.setItem("bgo_liff_profile", JSON.stringify({
-      userId: profile.userId || "",
-      displayName: profile.displayName || "",
-      pictureUrl: profile.pictureUrl || "",
-      statusMessage: profile.statusMessage || "",
-      contextType: context?.type || "",
-      liffId: LIFF_ID
-    }));
-  } catch (error) {
-    console.error("LIFF init failed:", error);
-    setStatus("เชื่อมต่อ LINE ไม่สำเร็จ", "warn");
-    profileSub.textContent = "กรุณาตรวจสอบ LIFF ID และ Allowed Domains";
-  }
-}
-initLiff();
-</script>
 </body>
 </html>
