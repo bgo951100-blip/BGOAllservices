@@ -22,30 +22,29 @@ header{background:linear-gradient(135deg,#0b3c6d,#1e88e5);color:#fff;padding:24p
 .section-title{margin:0 4px 14px;font-size:14px;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .service-tile,.footer-note,.ad-card{background:#fff;border:1px solid var(--border);border-radius:24px;box-shadow:0 10px 24px rgba(15,23,42,.06)}
-.service-tile{padding:18px 16px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:230px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;overflow:hidden}
+.service-tile{padding:14px 10px 12px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;min-height:144px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;overflow:hidden}
 .service-tile:hover,.service-tile:focus-visible{transform:translateY(-2px);box-shadow:0 16px 32px rgba(15,23,42,.10)}
-.icon-shell{width:96px;height:96px;border-radius:30px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 12px 24px rgba(15,23,42,.08)}
-.icon-shell svg{width:52px;height:52px;display:block}
-.tile-label{margin-top:14px;font-size:21px;font-weight:700;line-height:1.25}
-.tile-copy{margin:8px 0 0;font-size:12px;line-height:1.6;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:58px}
-.tile-chip{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:999px;font-size:11px;font-weight:700}
-.food .icon-shell{background:linear-gradient(180deg,#fff7df,#ffe8a8)}.food .tile-chip{background:#fff4db;color:#ad6800}
-.ride .icon-shell{background:linear-gradient(180deg,#ecfff4,#c7f3d8)}.ride .tile-chip{background:#eaf9ef;color:#0f7a31}
-.parcel .icon-shell{background:linear-gradient(180deg,#eef4ff,#d5e6ff)}.parcel .tile-chip{background:#edf4ff;color:#1d4ed8}
-.admin .icon-shell{background:linear-gradient(180deg,#f6efff,#eadcff)}.admin .tile-chip{background:#f3edff;color:#6d28d9}
+.icon-shell{width:82px;height:82px;border-radius:22px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.65),0 14px 24px rgba(15,23,42,.08)}
+.icon-shell svg{width:48px;height:48px;display:block}
+.tile-label{margin-top:10px;font-size:16px;font-weight:700;line-height:1.25}
+.tile-copy,.tile-chip{display:none}
+.food .icon-shell{background:linear-gradient(180deg,#fff8de,#ffd977)}
+.ride .icon-shell{background:linear-gradient(180deg,#eafff2,#b5f0ca)}
+.parcel .icon-shell{background:linear-gradient(180deg,#eef5ff,#c8dbff)}
+.admin .icon-shell{background:linear-gradient(180deg,#f7efff,#e7d4ff)}
 .ad-card{padding:14px}
 .ad-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-.ad-hero,.slider-shell{overflow:hidden;border-radius:18px;background:#edf4ff}
+.ad-hero,.slider-shell{overflow:hidden;border-radius:18px;background:linear-gradient(180deg,#f7fafc,#e7eef7)}
 .ad-hero{height:240px}
-.ad-hero img{width:100%;height:100%;object-fit:cover}
+.ad-hero img{width:100%;height:100%;object-fit:contain;object-position:center center;background:transparent}
 .slider-shell{position:relative;height:240px}
 .slider-track{display:flex;height:100%;transition:transform .45s ease}
 .slide{min-width:100%;position:relative;height:100%}
-.slide img{width:100%;height:100%;object-fit:cover}
+.slide img{width:100%;height:100%;object-fit:contain;object-position:center center;background:transparent}
 .slide-caption{position:absolute;left:12px;right:12px;bottom:12px;padding:8px 10px;border-radius:12px;background:rgba(11,60,109,.78);color:#fff;font-size:12px;line-height:1.4;backdrop-filter:blur(6px)}
 .slider-dots{display:flex;justify-content:center;gap:8px;margin-top:12px}.slider-dot{width:8px;height:8px;border-radius:999px;background:#c7d2e2;transition:all .2s ease}.slider-dot.active{width:24px;background:#1e88e5}
 .footer-note{margin:18px 4px 0;padding:12px 14px;color:#4b5563;font-size:12px;line-height:1.55;border-style:dashed}
-@media (max-width:520px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-tile{min-height:214px;padding:16px 12px 14px}.icon-shell{width:88px;height:88px;border-radius:28px}.icon-shell svg{width:46px;height:46px}.tile-label{font-size:18px}.tile-copy{min-height:54px}.header-copy h1{font-size:22px}.logo-wrap{width:56px;height:56px}.ad-row{grid-template-columns:1fr}.ad-hero,.slider-shell{height:180px}.slide-caption{font-size:11px;padding:7px 9px}}
+@media (max-width:520px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-tile{min-height:132px;padding:12px 8px 10px}.icon-shell{width:70px;height:70px;border-radius:18px}.icon-shell svg{width:40px;height:40px}.tile-label{font-size:15px}.header-copy h1{font-size:22px}.logo-wrap{width:56px;height:56px}.ad-row{grid-template-columns:1fr}.ad-hero,.slider-shell{height:180px}.slide-caption{font-size:11px;padding:7px 9px}}
 </style>
 </head>
 <body>
@@ -66,56 +65,20 @@ header{background:linear-gradient(135deg,#0b3c6d,#1e88e5);color:#fff;padding:24p
       <div class="section-title">&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;</div>
       <div class="grid">
         <a class="service-tile food" href="https://bae-tong-delivery-three.vercel.app/" target="_self" rel="noopener noreferrer">
-          <div class="icon-shell" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 14V30" stroke="#ad6800" stroke-width="4" stroke-linecap="round"/>
-              <path d="M25 14V30" stroke="#ad6800" stroke-width="4" stroke-linecap="round"/>
-              <path d="M31 14V30" stroke="#ad6800" stroke-width="4" stroke-linecap="round"/>
-              <path d="M25 30V50" stroke="#ad6800" stroke-width="4" stroke-linecap="round"/>
-              <path d="M43 14C39 18 39 28 43 32V50" stroke="#ad6800" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="tile-label">&#x0E2A;&#x0E31;&#x0E48;&#x0E07;&#x0E2D;&#x0E32;&#x0E2B;&#x0E32;&#x0E23;</div>
-          <p class="tile-copy">&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E40;&#x0E21;&#x0E19;&#x0E39;&#x0E08;&#x0E32;&#x0E01;&#x0E23;&#x0E49;&#x0E32;&#x0E19;&#x0E04;&#x0E49;&#x0E32;&#x0E43;&#x0E19;&#x0E23;&#x0E30;&#x0E1A;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E2A;&#x0E31;&#x0E48;&#x0E07;&#x0E08;&#x0E31;&#x0E14;&#x0E2A;&#x0E48;&#x0E07;&#x0E16;&#x0E36;&#x0E07;&#x0E04;&#x0E38;&#x0E13;</p>
-          <div class="tile-chip">Food Delivery</div>
+          <div class="icon-shell" aria-hidden="true"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="25" r="12" fill="#ffb020"/><path d="M14 44c0-7 6-12 14-12 9 0 16 5 16 12v4H14v-4Z" fill="#54b65d"/><path d="M40 16h8l5 7-6 4h-7l-3-6 3-5Z" fill="#ff7a00"/><rect x="37" y="32" width="12" height="10" rx="5" fill="#2ea44f"/></svg></div>
+          <div class="tile-label">&#x0E2D;&#x0E32;&#x0E2B;&#x0E32;&#x0E23;</div>
         </a>
         <a class="service-tile ride" href="https://bgo-ride.vercel.app/" target="_self" rel="noopener noreferrer">
-          <div class="icon-shell" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="21" cy="46" r="6" stroke="#0f7a31" stroke-width="4"/>
-              <circle cx="47" cy="46" r="6" stroke="#0f7a31" stroke-width="4"/>
-              <path d="M15 40L20 26H40L47 34H52C54 34 56 36 56 38V40" stroke="#0f7a31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M24 26V20C24 18.3 25.3 17 27 17H36" stroke="#0f7a31" stroke-width="4" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="tile-label">&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E23;&#x0E16;&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;</div>
-          <p class="tile-copy">&#x0E40;&#x0E25;&#x0E37;&#x0E2D;&#x0E01;&#x0E08;&#x0E38;&#x0E14;&#x0E23;&#x0E31;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E1B;&#x0E25;&#x0E32;&#x0E22;&#x0E17;&#x0E32;&#x0E07;&#x0E40;&#x0E1E;&#x0E37;&#x0E48;&#x0E2D;&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E43;&#x0E0A;&#x0E49;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E40;&#x0E14;&#x0E34;&#x0E19;&#x0E17;&#x0E32;&#x0E07;</p>
-          <div class="tile-chip">Ride Service</div>
+          <div class="icon-shell" aria-hidden="true"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="46" r="7" fill="#0f7a31"/><circle cx="46" cy="46" r="7" fill="#0f7a31"/><path d="M16 41h36a3 3 0 0 0 0-6h-4l-5-11H25l-6 11h-3a3 3 0 0 0 0 6Z" fill="#22a447"/><path d="M28 19h8c3 0 5 2 5 5v2H24v-1c0-4 2-6 4-6Z" fill="#0b6c3c"/><path d="M22 28h20l4 8H18l4-8Z" fill="#8de0a8"/></svg></div>
+          <div class="tile-label">&#x0E40;&#x0E14;&#x0E34;&#x0E19;&#x0E17;&#x0E32;&#x0E07;</div>
         </a>
         <a class="service-tile parcel" href="https://bgo-pacel.vercel.app/" target="_self" rel="noopener noreferrer">
-          <div class="icon-shell" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 23L32 15L46 23L32 31L18 23Z" stroke="#1d4ed8" stroke-width="4" stroke-linejoin="round"/>
-              <path d="M18 23V40L32 48L46 40V23" stroke="#1d4ed8" stroke-width="4" stroke-linejoin="round"/>
-              <path d="M32 31V48" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="tile-label">&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;&#x0E1E;&#x0E31;&#x0E2A;&#x0E14;&#x0E38;</div>
-          <p class="tile-copy">&#x0E01;&#x0E23;&#x0E2D;&#x0E01;&#x0E08;&#x0E38;&#x0E14;&#x0E23;&#x0E31;&#x0E1A;&#x0E41;&#x0E25;&#x0E30;&#x0E08;&#x0E38;&#x0E14;&#x0E2A;&#x0E48;&#x0E07;&#x0E2A;&#x0E33;&#x0E2B;&#x0E23;&#x0E31;&#x0E1A;&#x0E40;&#x0E23;&#x0E35;&#x0E22;&#x0E01;&#x0E43;&#x0E0A;&#x0E49;&#x0E1A;&#x0E23;&#x0E34;&#x0E01;&#x0E32;&#x0E23;&#x0E23;&#x0E31;&#x0E1A;&#x0E2A;&#x0E48;&#x0E07;&#x0E1E;&#x0E31;&#x0E2A;&#x0E14;&#x0E38;</p>
-          <div class="tile-chip">Parcel Service</div>
+          <div class="icon-shell" aria-hidden="true"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M18 23 32 16l14 7v17L32 48 18 40V23Z" fill="#ff9f2f"/><path d="M18 23 32 31l14-8" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 31v17" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round"/><rect x="23" y="20" width="8" height="6" rx="2" fill="#22c55e"/><rect x="33" y="20" width="8" height="6" rx="2" fill="#16a34a"/></svg></div>
+          <div class="tile-label">&#x0E2A;&#x0E48;&#x0E07;&#x0E02;&#x0E2D;&#x0E07;</div>
         </a>
         <a class="service-tile admin" href="https://line.me/R/ti/p/@bgo951100" target="_blank" rel="noopener noreferrer">
-          <div class="icon-shell" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 22C18 17.6 21.6 14 26 14H38C44.6 14 50 19.4 50 26V27C50 33.6 44.6 39 38 39H31L22 46V39.5C19.6 38 18 35.2 18 32.1V22Z" stroke="#6d28d9" stroke-width="4" stroke-linejoin="round"/>
-              <circle cx="26" cy="27" r="2.5" fill="#6d28d9"/>
-              <circle cx="32" cy="27" r="2.5" fill="#6d28d9"/>
-              <circle cx="38" cy="27" r="2.5" fill="#6d28d9"/>
-            </svg>
-          </div>
-          <div class="tile-label">&#x0E15;&#x0E34;&#x0E14;&#x0E15;&#x0E48;&#x0E2D;&#x0E41;&#x0E2D;&#x0E14;&#x0E21;&#x0E34;&#x0E19;</div>
-          <p class="tile-copy">&#x0E2A;&#x0E2D;&#x0E1A;&#x0E16;&#x0E32;&#x0E21;&#x0E02;&#x0E49;&#x0E2D;&#x0E21;&#x0E39;&#x0E25; &#x0E41;&#x0E08;&#x0E49;&#x0E07;&#x0E1B;&#x0E31;&#x0E0D;&#x0E2B;&#x0E32; &#x0E2B;&#x0E23;&#x0E37;&#x0E2D;&#x0E02;&#x0E2D;&#x0E04;&#x0E27;&#x0E32;&#x0E21;&#x0E0A;&#x0E48;&#x0E27;&#x0E22;&#x0E40;&#x0E2B;&#x0E25;&#x0E37;&#x0E2D;&#x0E40;&#x0E1E;&#x0E34;&#x0E48;&#x0E21;&#x0E40;&#x0E15;&#x0E34;&#x0E21;</p>
-          <div class="tile-chip">Support</div>
+          <div class="icon-shell" aria-hidden="true"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M18 22c0-5 4-9 9-9h12c8 0 14 6 14 14v1c0 8-6 14-14 14h-6l-9 8v-8c-4-1-6-4-6-8v-12Z" fill="#7c3aed"/><circle cx="27" cy="27" r="3" fill="#fff"/><circle cx="34" cy="27" r="3" fill="#fff"/><circle cx="41" cy="27" r="3" fill="#fff"/><path d="M23 39h18" stroke="#d8b4fe" stroke-width="3" stroke-linecap="round"/></svg></div>
+          <div class="tile-label">&#x0E15;&#x0E34;&#x0E14;&#x0E15;&#x0E48;&#x0E2D;</div>
         </a>
       </div>
     </section>
@@ -125,25 +88,25 @@ header{background:linear-gradient(135deg,#0b3c6d,#1e88e5);color:#fff;padding:24p
       <div class="ad-card">
         <div class="ad-row">
           <div class="ad-hero">
-            <img src="ad-main.png" alt="&#x0E20;&#x0E32;&#x0E1E;&#x0E42;&#x0E06;&#x0E29;&#x0E13;&#x0E32;&#x0E2B;&#x0E25;&#x0E31;&#x0E01;">
+            <img src="ad-main-fit.jpg" alt="&#x0E20;&#x0E32;&#x0E1E;&#x0E42;&#x0E06;&#x0E29;&#x0E13;&#x0E32;&#x0E2B;&#x0E25;&#x0E31;&#x0E01;">
           </div>
           <div>
             <div class="slider-shell">
               <div class="slider-track" id="promoTrack">
                 <div class="slide">
-                  <img src="ad-slide-1.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E04;&#x0E23;&#x0E35;&#x0E21;">
+                  <img src="ad-slide-1-fit.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E04;&#x0E23;&#x0E35;&#x0E21;">
                   <div class="slide-caption">&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E04;&#x0E23;&#x0E35;&#x0E21;</div>
                 </div>
                 <div class="slide">
-                  <img src="ad-slide-2.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E43;&#x0E1A;&#x0E40;&#x0E15;&#x0E22;">
+                  <img src="ad-slide-2-fit.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E43;&#x0E1A;&#x0E40;&#x0E15;&#x0E22;">
                   <div class="slide-caption">&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E43;&#x0E1A;&#x0E40;&#x0E15;&#x0E22;</div>
                 </div>
                 <div class="slide">
-                  <img src="ad-slide-3.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E44;&#x0E01;&#x0E48;&#x0E40;&#x0E15;&#x0E23;">
+                  <img src="ad-slide-3-fit.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E44;&#x0E01;&#x0E48;&#x0E40;&#x0E15;&#x0E23;">
                   <div class="slide-caption">&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E44;&#x0E01;&#x0E48;&#x0E40;&#x0E15;&#x0E23;</div>
                 </div>
                 <div class="slide">
-                  <img src="ad-slide-4.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E0A;&#x0E47;&#x0E2D;&#x0E01;&#x0E42;&#x0E01;&#x0E44;&#x0E01;&#x0E48;">
+                  <img src="ad-slide-4-fit.jpg" alt="&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E0A;&#x0E47;&#x0E2D;&#x0E01;&#x0E42;&#x0E01;&#x0E44;&#x0E01;&#x0E48;">
                   <div class="slide-caption">&#x0E0B;&#x0E32;&#x0E25;&#x0E32;&#x0E40;&#x0E1B;&#x0E32;&#x0E44;&#x0E2A;&#x0E49;&#x0E0A;&#x0E47;&#x0E2D;&#x0E01;&#x0E42;&#x0E01;&#x0E44;&#x0E01;&#x0E48;</div>
                 </div>
               </div>
